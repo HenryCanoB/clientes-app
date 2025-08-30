@@ -50,7 +50,7 @@ export const LoginForm = ({ onSuccess, onError }: LoginFormProps) => {
       className="max-w-md mx-auto bg-white p-8 rounded-lg shadow-lg"
     >
       <div className="text-center mb-8">
-        <h2 className="text-3xl font-bold text-gray-900">Galaxy</h2>
+        <h2 className="text-3xl font-bold text-gray-900">Gestiòn de Clientes</h2>
       </div>
 
       <div className="space-y-6">

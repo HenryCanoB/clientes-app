@@ -16,7 +16,7 @@ export const LoginPage = () => {
   }, [isAuthenticated, navigate]);
 
   const handleLoginSuccess = () => {
-    notify.success("¡Bienvenido a Galaxy!");
+    notify.success("¡Bienvenido al sistema!");
     navigate("/", { replace: true });
   };
 

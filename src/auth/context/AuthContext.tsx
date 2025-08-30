@@ -1,7 +1,7 @@
 import React, { useEffect, useReducer } from "react";
 import type { AuthState, User, LoginCredentials } from "../auth.types";
 import { loginUser, logoutUser, getCurrentUser } from "../auth.service";
-import { AuthContext } from "./UseAuth";
+import { AuthContext } from "./useAuth";
 
 export interface AuthContextType extends AuthState {
   login: (credentials: LoginCredentials) => Promise<void>;

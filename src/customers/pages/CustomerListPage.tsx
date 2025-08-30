@@ -19,7 +19,20 @@ export const CustomerListPage = () => {
   const { toPDF, targetRef } = usePDF({ filename: "clientes.pdf" });
 
   const handleLogout = async () => {
-    await logout();
+    Swal.fire({
+      title: "¿Estás seguro que deseas cerrar sesión?",
+      text: "",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Si",
+      cancelButtonText: "No",
+    }).then(async (result) => {
+      if (result.isConfirmed) {
+        await logout();
+      }
+    });
   };
 
   const notificacion = useNotifications();
@@ -50,13 +63,14 @@ export const CustomerListPage = () => {
   };
 
   const exportableData = customers.map(
-    ({ name, lastname, email, phone, user, id }) => ({
+    ({ name, lastname, email, phone, user, id, password }) => ({
       ID: id,
       Nombre: name,
       Apellido: lastname,
       Email: email,
       Teléfono: phone,
       Usuario: user,
+      Contraseña: password,
     })
   );
 

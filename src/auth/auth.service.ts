@@ -12,9 +12,7 @@ export const loginUser = async (
     if (!response.ok) throw new Error("Error al conectar con el servidor");
 
     const users = (await response.json()) as User[];
-    console.log(users);
-    console.log(credentials.email);
-    console.log(credentials.password);
+
     const user = users.find(
       (u: User) =>
         u.email === credentials.email && u.password === credentials.password

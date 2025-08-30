@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { LoginForm } from "../components/LoginForm";
-import { useAuth } from "../context/UseAuth";
+import { useAuth } from "../context/useAuth";
 import { useEffect } from "react";
 import { useNotifications } from "../../shared/useNotifications";
 

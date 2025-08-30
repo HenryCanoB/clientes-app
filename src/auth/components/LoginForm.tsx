@@ -2,7 +2,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { loginSchema, type LoginFormData } from "../schemas";
 import { FormField } from "../../customers/common/FormField";
-import { useAuth } from "../context/UseAuth";
+import { useAuth } from "../context/useAuth";
 import { useState } from "react";
 
 interface LoginFormProps {
@@ -59,7 +59,7 @@ export const LoginForm = ({ onSuccess, onError }: LoginFormProps) => {
           type="email"
           registration={register("email")}
           errors={errors.email}
-          placeholder="usuario@galaxy.com"
+          placeholder="usuario@gmail.com"
         />
 
         <FormField

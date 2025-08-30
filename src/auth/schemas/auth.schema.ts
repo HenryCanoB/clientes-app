@@ -5,7 +5,7 @@ const onlySpaces = /^\s*$/;
 export const loginSchema = z.object({
   email: z
     .email({ message: "Email invalido" })
-    .regex(/^[\w.%+-]+@galaxy.com$/, "Solo se permiten dominios galaxy")
+    .regex(/^[\w.%+-]+@gmail.com$/, "Solo se permiten dominios galaxy")
     .transform((v) => v.trim().toLowerCase()),
   password: z
     .string()

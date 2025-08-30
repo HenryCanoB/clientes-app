@@ -20,7 +20,7 @@ export const customerBaseScheme = z.object({
     .refine((v) => !onlySpaces.test(v), "Campo no vacio"),
   email: z
     .email("email invalido")
-    .regex(/^[\w.%+-]+@galaxy.com$/, "Solo se permiten dominios Galaxy")
+    .regex(/^[\w.%+-]+@gmail.com$/, "Solo se permiten dominios Galaxy")
     .transform((v) => v.trim().toLowerCase()),
   phone: z
     .string()

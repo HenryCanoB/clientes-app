@@ -57,7 +57,7 @@ export const CustomerFormImpl = ({ customerId, notify }: Props) => {
           text: "Cliente actualizado exitosamente!",
           icon: "success",
         });*/
-        notify.success("Cliente fue actualizado");
+        notify.success("Cliente fue actualizado!");
       } else {
         await createCustomer(data);
         /*
